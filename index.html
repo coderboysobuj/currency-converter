@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Currency converter app</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class='flex items-center text-white w-full h-screen justify-center bg-[#221f2f] px-2'>
+  <div class="w-[25rem] bg-black/20 px-4 py-3 shadow-lg rounded-lg">
+    <h2 class="text-3xl font-bold text-center">Currency Converter</h2>
+    <form class='my-4 w-full'>
+      <div class="amount">
+        <p class='text-xl mb-3'>Amount</p>
+        <input type="text"
+          class='h-[40px] w-full rounded-md text-xl px-2 border border-[#999] transition bg-transparent hover:boder-[#675afe] focus:boder-[#675afe] focus:ring-0 focus:outline-none'
+          value="1">
+      </div>
+      <div class="flex flex-col w-full justify-between items-center mt-5">
+        <div class="from w-full">
+          <p class="text-xl mb-3">From</p>
+          <div
+            class="flex w-full items-center border border-[#999] h-[40px] rounded-md px-2 bg-transparent cursor-pointer">
+            <img class='max-w-[20px] mr-2' src="https://flagcdn.com/48x36/us.png">
+            <select class="w-full cursor-pointer text-xl bg-transparent"></select>
+          </div>
+        </div>
+        <div class="cursor-pointer reverse mt-6 text-lg rotate-90 transition"><i class="fas fa-exchange-alt"></i></div>
+        <div class="w-full to">
+          <p class='text-xl mb-3'>To</p>
+          <div
+            class="flex w-full border flex items-center border-[#999] h-[40px] rounded-md px-2 bg-transparent cursor-pointer">
+            <img class='max-w-[20px] mr-2' src="https://flagcdn.com/48x36/gb.png">
+            <select class="w-full cursor-pointer text-xl bg-transparent "></select>
+          </div>
+        </div>
+        <div class="my-4 text-xl result"></div>
+        <button class="h-[42px] w-full bg-[#20232c] font-lg rounded-md">Get Exchange Rate</button>
+
+      </div>
+    </form>
+  </div>
+  <script src="app.js" type='module'></script>
+</body>
+
+</html>
